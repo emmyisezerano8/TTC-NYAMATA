@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTC Nyamata - Academic Programs</title>
+    <style>
+        /* Modern Reset and CSS Variables */
+        :root {
+            --primary-color: #0b5c3a; /* Rwandan Educational Green */
+            --secondary-color: #f39c12; /* Golden Accent */
+            --bg-light: #f8f9fa;
+            --text-dark: #2c3e50;
+            --card-border: rgba(0, 0, 0, 0.08);
+            
+            /* REB/TTC Specific Option Colors */
+            --color-sme: #0288d1;   /* Science & Math */
+            --color-eclpe: #e91e63; /* Early Childhood */
+            --color-sse: #c205e3;   /* Social Studies */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        /* Advanced Top Navigation Bar */
+        nav {
+            background-color: #0a0202;
+            box-shadow: 0 4px 12px rgba(22, 211, 211, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Header Section Area */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #03130c 100%);
+            color: rgb(172, 223, 3);
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Workspace Container */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 60px 20px;
+        }
+
+        /* Advanced Multi-Column Grid System */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Micro-interactions & Advanced Course Card Styles */
+        .course-card {
+            background: #1c1b1b;
+            border-radius: 12px;
+            border: 1px solid var(--card-border);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(165, 235, 2, 0.9);
+        }
+
+        .card-header {
+            padding: 25px 25px 10px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Status Tags dynamically colored by Department */
+        .dept-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .tag-sme { background-color: rgba(2, 136, 209, 0.1); color: var(--color-sme); }
+        .tag-eclpe { background-color: rgba(233, 30, 99, 0.1); color: var(--color-eclpe); }
+        .tag-sse { background-color: rgba(156, 39, 176, 0.1); color: var(--color-sse); }
+
+        .year-indicator {
+            font-size: 0.85rem;
+            color: #a309f1;
+            font-weight: 500;
+        }
+
+        .card-body {
+            padding: 0 25px 25px 25px;
+            flex-grow: 1;
+        }
+
+        .card-body h2 {
+            font-size: 1.4rem;
+            color: #d49502;
+            margin-bottom: 12px;
+        }
+
+        .card-body p {
+            color: #11dd03;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* Modern CTA Buttons */
+        .card-footer {
+            padding: 0 25px 25px 25px;
+            background: rgb(1, 202, 31);
+        }
+
+        .btn-portal {
+            display: block;
+            text-align: center;
+            background-color: var(--bg-light);
+            color: #34495e;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            border: 1px solid var(--card-border);
+        }
+
+        .btn-portal:hover {
+            background-color: var(--primary-color);
+            color: rgb(169, 241, 3);
+            border-color: var(--primary-color);
+        }
+
+        /* Elegant Footer block */
+        footer {
+            background-color: #1a252f;
+            color: #aff709;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+        /* BODY BACKGROUND */
+        body {
+            background-image: url('images/ttc-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            BACKGROUND-COLOR: rgba(36, 7, 92, 0.85);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">TTC Nyamata</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="https://elearning.reb.rw">E-Learning</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Competence-Based Curriculum Programs</h1>
+        <p>Pre-service teacher training aligned with the Rwanda Education Board (REB) national standards.</p>
+    </header>
+
+    <main>
+        <div class="course-grid">
+            
+            <!-- SME Card -->
+            <article class="course-card">
+                <div class="card-header">
+                    <span class="dept-tag tag-sme">SME Option</span>
+                    <span class="year-indicator">Year 2 & 3</span>
+                </div>
+                <div class="card-body">
+                    <h2>Science and Mathematics Education</h2>
+                    <p>Focuses on advanced mathematics, physics, chemistry, biology, and the integration of modern ICT tools into STEM instruction methodologies.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="https://elearning.reb.rw/pluginfile.php/178474/mod_resource/content/1/Mathematics%20Syllabus_SME.pdf" class="btn-portal">View Syllabus Modules</a>
+                </div>
+            </article>
+
+            <!-- ECLPE Card -->
+            <article class="course-card">
+                <div class="card-header">
+                    <span class="dept-tag tag-eclpe">ECLPE Option</span>
+                    <span class="year-indicator">Year 2 & 3</span>
+                </div>
+                <div class="card-body">
+                    <h2>Early Childhood & Lower Primary</h2>
+                    <p>Specialized pedagogy for foundational education, including early-years psychology, language instruction layouts, and foundational arithmetic methods.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="https://elearning.reb.rw/pluginfile.php/20276/mod_folder/content/0/TTC%20Curriculum%20Framework%202020/TTC%20CURRICULUM%20FRAMEWORK%202020.pdf" class="btn-portal">View Syllabus Modules</a>
+                </div>
+            </article>
+
+            <!-- SSE Card -->
+            <article class="course-card">
+                <div class="card-header">
+                    <span class="dept-tag tag-sse">SSE Option</span>
+                    <span class="year-indicator">Year 2 & 3</span>
+                </div>
+                <div class="card-body">
+                    <h2>Social Studies Education</h2>
+                    <p>Comprehensive training covering History, Geography, Kinyarwanda, English Literature, and inclusive classroom assessment strategies.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="https://elearning.reb.rw/pluginfile.php/178473/mod_resource/content/1/Mathematics%20Syllabus_TTC%20SSE%20%281%29.pdf" class="btn-portal">View Syllabus Modules</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Teacher Training College Nyamata. Powered by Rwanda Basic Education Board Framework.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,2780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="TTC NYAMATA - A centre of excellence in teacher education, innovation, leadership and professional development in Rwanda.">
+
+    <meta name="keywords"
+        content="TTC Nyamata, Teacher Training College Nyamata, Rwanda, education, students, teachers">
+
+    <meta name="author" content="TTC NYAMATA">
+
+    <title>TTC NYAMATA | Teacher Training College</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =========================================================
+   GLOBAL
+========================================================= */
+
+        :root {
+            --primary: #0b5d3b;
+            --primary-dark: #063c28;
+            --secondary: #f2b705;
+            --dark: #071b14;
+            --text: #25352f;
+            --muted: #66756f;
+            --light: #f5f8f6;
+            --white: #ffffff;
+            --border: #e4ebe7;
+            --shadow: 0 15px 40px rgba(0, 0, 0, .08);
+            --radius: 18px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            color: var(--text);
+            background: #0a0855;
+            line-height: 1.7;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 55px;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--primary);
+            background: #eaf5ef;
+            padding: 7px 15px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .section-header h2 {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(30px, 4vw, 45px);
+            line-height: 1.15;
+            color: var(--dark);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--muted);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 13px 22px;
+            border-radius: 9px;
+            font-weight: 700;
+            border: 2px solid transparent;
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border-color: white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* =========================================================
+   TOP BAR
+========================================================= */
+
+        .topbar {
+            background: var(--dark);
+            color: #42f796;
+            font-size: 13px;
+        }
+
+        .topbar-inner {
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .top-info {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        .top-info span {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .top-links {
+            display: flex;
+            gap: 18px;
+        }
+
+        .top-links a:hover {
+            color: white;
+        }
+
+        /* =========================================================
+   NAVIGATION
+========================================================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .06);
+        }
+
+        .navbar {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text strong {
+            font-family: "Poppins", sans-serif;
+            color: var(--primary);
+            font-size: 18px;
+            line-height: 1.1;
+        }
+
+        .logo-text span {
+            color: #718079;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .06em;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links>a {
+            font-size: 14px;
+            font-weight: 700;
+            color: #33453e;
+            position: relative;
+        }
+
+        .nav-links>a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: .3s;
+        }
+
+        .nav-links>a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links>a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--primary);
+            color: white !important;
+            padding: 10px 17px;
+            border-radius: 7px;
+        }
+
+        .nav-cta::after {
+            display: none;
+        }
+
+        .menu-btn {
+            display: none;
+            border: 0;
+            background: none;
+            font-size: 27px;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* =========================================================
+   HERO
+========================================================= */
+
+        .hero {
+            min-height: 690px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+
+            background:
+                linear-gradient(90deg,
+                    rgba(3, 34, 23, .94) 0%,
+                    rgba(4, 55, 37, .78) 48%,
+                    rgba(3, 31, 22, .45) 100%),
+                url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85") center/cover;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            right: -180px;
+            top: -150px;
+            background: rgba(242, 183, 5, .13);
+            filter: blur(5px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 760px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, .12);
+            border: 1px solid rgba(255, 255, 255, .22);
+            padding: 8px 14px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(42px, 6vw, 75px);
+            line-height: 1.02;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--secondary);
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #e5eee9;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .hero-buttons .btn-primary {
+            background: var(--secondary);
+            color: #17220d;
+        }
+
+        .hero-buttons .btn-primary:hover {
+            background: #ffd044;
+        }
+
+        .hero-bottom {
+            position: absolute;
+            z-index: 4;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(3, 28, 20, .84);
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .hero-stat {
+            padding: 20px;
+            text-align: center;
+            border-right: 1px solid rgba(255, 255, 255, .12);
+        }
+
+        .hero-stat:last-child {
+            border-right: 0;
+        }
+
+        .hero-stat strong {
+            display: block;
+            font-family: "Poppins", sans-serif;
+            color: white;
+            font-size: 25px;
+        }
+
+        .hero-stat span {
+            color: #b9cbc3;
+            font-size: 12px;
+        }
+
+        /* =========================================================
+   QUICK LINKS
+========================================================= */
+
+        .quick-links {
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: white;
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .quick-card {
+            padding: 27px 22px;
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            border-right: 1px solid var(--border);
+            transition: .3s;
+        }
+
+        .quick-card:last-child {
+            border-right: 0;
+        }
+
+        .quick-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .quick-icon {
+            min-width: 45px;
+            height: 45px;
+            display: grid;
+            place-items: center;
+            border-radius: 10px;
+            background: #eaf5ef;
+            color: var(--primary);
+            font-size: 20px;
+        }
+
+        .quick-card h3 {
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .quick-card p {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        /* =========================================================
+   ABOUT
+========================================================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 510px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .about-badge {
+            position: absolute;
+            right: -25px;
+            bottom: 30px;
+            background: rgb(118, 215, 7);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            border-radius: 15px;
+            width: 180px;
+        }
+
+        .about-badge strong {
+            display: block;
+            font-size: 30px;
+            color: var(--primary);
+            font-family: "Poppins";
+        }
+
+        .about-badge span {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .about-content .section-label {
+            margin-bottom: 13px;
+        }
+
+        .about-content h2 {
+            font-family: "Poppins";
+            font-size: clamp(30px, 4vw, 44px);
+            line-height: 1.15;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .about-content>p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .check-list {
+            display: grid;
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .check-list li {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            font-weight: 600;
+        }
+
+        .check {
+            color: var(--primary);
+            font-weight: 900;
+        }
+
+        /* =========================================================
+   PROGRAMS
+========================================================= */
+
+        .programs {
+            background: #0a0956;
+            ;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .program-card {
+            background: rgb(11, 3, 71);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow);
+        }
+
+        .program-image {
+            height: 210px;
+            overflow: hidden;
+        }
+
+        .program-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .program-card:hover .program-image img {
+            transform: scale(1.06);
+        }
+
+        .program-body {
+            padding: 23px;
+        }
+
+        .program-tag {
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .program-body h3 {
+            font-family: "Poppins";
+            margin: 7px 0;
+        }
+
+        .program-body p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .read-more {
+            color: var(--primary);
+            font-weight: 800;
+            font-size: 13px;
+        }
+
+
+
+        /* =========================================================
+   NEWS
+========================================================= */
+
+        .news {
+            background: rgb(38, 16, 117);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .news-card {
+            background: rgb(1, 19, 7);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .news-image {
+            height: 210px;
+            position: relative;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-date {
+            position: absolute;
+            left: 15px;
+            bottom: 15px;
+            background: rgb(5, 245, 1);
+            padding: 8px 11px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(219, 4, 4, 0.1);
+        }
+
+        .news-date strong {
+            display: block;
+            color: #0b5d3b;
+            font-size: 18px;
+            line-height: 1;
+        }
+
+        .news-date span {
+            font-size: 9px;
+            color: var(--muted);
+        }
+
+        .news-body {
+            padding: 22px;
+        }
+
+        .news-category {
+            font-size: 10px;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
+
+        .news-body h3 {
+            font-family: "Poppins";
+            font-size: 18px;
+            line-height: 1.35;
+            margin: 8px 0;
+            color: #f4f9f2
+        }
+
+        .news-body p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================================================
+   EVENTS
+========================================================= */
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 25px;
+        }
+
+        .event-feature {
+            position: relative;
+            min-height: 420px;
+            border-radius: 18px;
+            overflow: hidden;
+            background:
+                linear-gradient(0deg, rgba(3, 29, 20, .95), rgba(176, 232, 6, 0.1)),
+                url("https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=85") center/cover;
+        }
+
+        .event-content {
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            color: rgb(15, 45, 110);
+        }
+
+        .event-content h3 {
+            font-family: "Poppins";
+            font-size: 28px;
+            line-height: 1.2;
+            margin: 10px 0;
+        }
+
+        .event-content p {
+            color: #0b871f;
+        }
+
+        .event-list {
+            display: grid;
+            gap: 15px;
+        }
+
+        .event-item {
+            display: flex;
+            gap: 16px;
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+        }
+
+        .event-calendar {
+            min-width: 55px;
+            height: 60px;
+            border-radius: 10px;
+            background: #92f704;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: #0b871f;
+        }
+
+        .event-calendar strong {
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .event-calendar span {
+            font-size: 9px;
+            font-weight: 800;
+        }
+
+        .event-item h4 {
+            font-size: 15px;
+        }
+
+        .event-item p {
+            font-size: 12px;
+            color: #110c60;
+        }
+
+        /* =========================================================
+   STATISTICS
+========================================================= */
+
+        .statistics {
+            background: var(--primary);
+            color: rgb(95, 9, 9);
+        }
+
+        .statistics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            color:#0a0855
+        }
+
+        .stat {
+            padding: 10px 20px;
+            border-right: 1px solid rgba(0, 4, 125, 0.916);
+        }
+
+        .stat:last-child {
+            border: 0;
+        }
+
+        .stat strong {
+            font-family: "Poppins";
+            font-size: 40px;
+            color: #0a0855;
+        }
+
+        .stat span {
+            display: block;
+            color: #1b1773;
+            font-size: 13px;
+        }
+           
+
+
+
+        /* =========================================================
+   GALLERY
+========================================================= */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 190px;
+            gap: 12px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .gallery-item:first-child {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: .5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(transparent, rgba(0, 185, 43, 0.968));
+            opacity: 0;
+            transition: .3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* =========================================================
+   CTA
+========================================================= */
+
+        .cta {
+            padding: 80px 0;
+        }
+
+        .cta-box {
+            background:
+                linear-gradient(100deg, rgba(4, 50, 33, .98), rgba(10, 96, 60, .9)),
+                url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=80") center/cover;
+            color: white;
+            border-radius: 22px;
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .cta-box h2 {
+            font-family: "Poppins";
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.15;
+            margin-bottom: 10px;
+        }
+
+        .cta-box p {
+            color: #d6e5de;
+            max-width: 650px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================================================
+   CONTACT
+========================================================= */
+
+        .contact {
+            background: #101765;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 40px;
+            color: rgb(156, 244, 14);
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 17px;
+            color: #2528e7;
+        }
+
+        .contact-card {
+            background: rgb(44, 19, 19);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 13px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .contact-card-icon {
+            width: 42px;
+            height: 42px;
+            min-width: 42px;
+            background: #010e07;
+            color: #d7f81c;
+            display: grid;
+            place-items: center;
+            border-radius: 9px;
+        }
+
+        .contact-card h3 {
+            font-size: 14px;
+            color: #2710be
+        }
+
+        .contact-card p {
+            color: #0066cc;
+            font-size: 12px;
+        }
+
+
+        /* =========================================================
+   FOOTER
+========================================================= */
+
+        footer {
+            background: #061a12;
+            color: #bdcec6;
+        }
+
+        .footer-main {
+            padding: 65px 0 45px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+            gap: 40px;
+        }
+
+        .footer-brand p {
+            font-size: 13px;
+            margin: 17px 0;
+            max-width: 330px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-logo img {
+            width: 45px;
+            height: 45px;
+        }
+
+        .footer-logo strong {
+            color: white;
+            font-family: "Poppins";
+        }
+
+        .footer-column h3 {
+            color: white;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            font-size: 13px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .socials {
+            display: flex;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .socials a {
+            width: 36px;
+            height: 36px;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 8px;
+            font-size: 13px;
+        }
+
+        .socials a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            padding: 20px 0;
+            font-size: 11px;
+        }
+
+        .footer-bottom-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* =========================================================
+   BACK TO TOP
+========================================================= */
+
+        #backTop {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 45px;
+            height: 45px;
+            border: 0;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            cursor: pointer;
+            display: none;
+            z-index: 900;
+            box-shadow: var(--shadow);
+        }
+
+        /* =========================================================
+   SEARCH MODAL
+========================================================= */
+
+        .search-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .72);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: none;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 100px 20px;
+        }
+
+        .search-modal.active {
+            display: flex;
+        }
+
+        .search-box {
+            width: min(700px, 100%);
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+        }
+
+        .search-top {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-top input {
+            flex: 1;
+            padding: 14px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .close-search {
+            border: 0;
+            background: #edf2ef;
+            border-radius: 8px;
+            padding: 0 16px;
+            cursor: pointer;
+        }
+
+        .search-result {
+            padding: 15px 5px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .search-result strong {
+            color: var(--primary);
+        }
+
+        /* =========================================================
+   RESPONSIVE
+========================================================= */
+
+        @media(max-width:1000px) {
+
+            .nav-links {
+                position: absolute;
+                top: 78px;
+                left: 0;
+                right: 0;
+                background: white;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 20px 5%;
+                box-shadow: 0 15px 25px rgba(0, 0, 0, .08);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links>a {
+                padding: 10px 0;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero-stats,
+            .quick-grid,
+            .statistics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .why-grid,
+            .events-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .program-grid,
+            .news-grid,
+            .leaders,
+            .testimonial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-main {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cta-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media(max-width:650px) {
+
+            .topbar {
+                display: none;
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .hero {
+                min-height: 670px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .hero-stats,
+            .quick-grid,
+            .program-grid,
+            .news-grid,
+            .statistics-grid,
+            .leaders,
+            .testimonial-grid,
+            .footer-main {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-card {
+                border-right: 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .quick-card:last-child {
+                border-bottom: 0;
+            }
+
+            .about-image img,
+            .why-image img {
+                height: 330px;
+            }
+
+            .about-badge {
+                right: 10px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 150px;
+            }
+
+            .gallery-item:first-child {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+
+            .cta-box {
+                padding: 35px 25px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .footer-bottom-inner {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ======================================================
+     NAVIGATION
+====================================================== -->
+
+    <header>
+
+        <div class="container navbar">
+
+            <a href="#home" class="logo">
+
+                <!-- Replace 87.png with your actual logo -->
+                <img src="image.png" alt="TTC NYAMATA Logo">
+
+                <div class="logo-text">
+                    <strong>TTC NYAMATA</strong>
+                    <span>TEACHER TRAINING COLLEGE</span>
+                </div>
+
+            </a>
+
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="courses.html">Academics</a>
+                <a href="#news">News</a>
+                <a href="#events">Events</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+                <a href="admin.html" class="admin-nav-link">🔐 Admin</a>
+
+                <a href="#" class="nav-cta" onclick="openSearch(); return false;">
+                    🔎 Search
+                </a>
+
+            </nav>
+
+
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ======================================================
+     HERO
+====================================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+                    ✦ Excellence • Innovation • Leadership
+                </div>
+
+                <h1>
+                    Shaping the
+                    <span>Teachers</span>
+                    of Tomorrow
+                </h1>
+
+                <p>
+                    Welcome to TTC NYAMATA, a centre committed to developing
+                    competent, creative and responsible educators prepared to
+                    transform communities through quality education.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#about" class="btn btn-primary">
+                        Discover TTC NYAMATA →
+                    </a>
+
+                    <a href="#programs" class="btn btn-outline">
+                        Explore Academics
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-bottom">
+
+            <div class="container hero-stats">
+
+                <div class="hero-stat">
+                    <strong>20+</strong>
+                    <span>Years of Excellence</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>1,000+</strong>
+                    <span>Students</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>50+</strong>
+                    <span>Educators</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>10+</strong>
+                    <span>Academic Areas</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================================
+     QUICK LINKS
+====================================================== -->
+
+    <section class="quick-links">
+
+        <div class="container">
+
+            <div class="quick-grid">
+
+                <a href="#programs" class="quick-card">
+
+                    <div class="quick-icon">🎓</div>
+
+                    <div>
+                        <h3>Academic Programs</h3>
+                        <p>Explore our learning opportunities.</p>
+                    </div>
+
+                </a>
+
+
+                <a href="#events" class="quick-card">
+
+                    <div class="quick-icon">📅</div>
+
+                    <div>
+                        <h3>School Events</h3>
+                        <p>Discover upcoming activities.</p>
+                    </div>
+
+                </a>
+
+
+                <a href="#news" class="quick-card">
+
+                    <div class="quick-icon">📰</div>
+
+                    <div>
+                        <h3>Latest News</h3>
+                        <p>Stay informed with TTC updates.</p>
+                    </div>
+
+                </a>
+
+
+                <a href="#contact" class="quick-card">
+
+                    <div class="quick-icon">💬</div>
+
+                    <div>
+                        <h3>Contact Us</h3>
+                        <p>Talk to the TTC NYAMATA team.</p>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================================
+     ABOUT
+====================================================== -->
+
+    <section class="section" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-image">
+
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=85"
+                    alt="Students learning together">
+
+                <div class="about-badge">
+                    <strong>Excellence</strong>
+                    <span>Building the future through education.</span>
+                </div>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <span class="section-label">About TTC NYAMATA</span>
+
+                <h2>
+                    Education that creates
+                    meaningful impact.
+                </h2>
+
+                <p>
+                    TTC NYAMATA is dedicated to preparing future educators with
+                    the knowledge, professional skills, values and innovative
+                    mindset needed to make a positive difference in schools
+                    and communities.
+                </p>
+
+                <p>
+                    Our learning environment encourages academic excellence,
+                    creativity, collaboration, discipline and responsible
+                    leadership.
+                </p>
+
+
+                <ul class="check-list">
+
+                    <li>
+                        <span class="check">✓</span>
+                        Quality teacher education
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Innovation and technology
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Leadership and character development
+                    </li>
+
+                    <li>
+                        <span class="check">✓</span>
+                        Community engagement
+                    </li>
+
+                </ul>
+
+
+                <a href="About.html" class="btn btn-primary">
+                    Learn More About Us →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================================
+     PROGRAMS
+====================================================== -->
+
+    <section class="section programs" id="programs">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">Academics</span>
+
+                <h2>
+                    Learning for a changing world
+                </h2>
+
+                <p>
+                    Our academic environment combines strong foundations,
+                    practical experience and modern approaches to education.
+                </p>
+
+            </div>
+
+
+            <div class="program-grid">
+
+                <article class="program-card">
+
+                    <div class="program-image">
+
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80"
+                            alt="Teacher education">
+
+                    </div>
+
+                    <div class="program-body">
+
+                        <span class="program-tag">YEAR ONE </span>
+
+                        <h3>Teacher Education</h3>
+
+                        <p>
+                            Develop the knowledge and classroom skills required
+                            to become an effective professional educator.
+                        </p>
+
+                        <a href="https://elearning.reb.rw/course/index.php?categoryid=10" class="read-more">Explore
+                            program →</a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-image">
+
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+                            alt="ICT learning">
+
+                    </div>
+
+                    <div class="program-body">
+
+                        <span class="program-tag">YEAR TWO</span>
+
+                        <h3>ICT & Digital Learning</h3>
+
+                        <p>
+                            Build digital skills and discover how technology
+                            can transform teaching and learning.
+                        </p>
+
+                        <a href="https://elearning.reb.rw/course/index.php?categoryid=27" class="read-more">Explore
+                            program →</a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="program-card">
+
+                    <div class="program-image">
+
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80"
+                            alt="Leadership">
+
+                    </div>
+
+                    <div class="program-body">
+
+                        <span class="program-tag">YEAR THREE</span>
+
+                        <h3>Leadership & Innovation</h3>
+
+                        <p>
+                            Encourage creativity, leadership, problem solving
+                            and responsible community participation.
+                        </p>
+
+                        <a href="https://elearning.reb.rw/course/index.php?categoryid=28" class="read-more">Explore
+                            program →</a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ======================================================
+     NEWS
+====================================================== -->
+
+    <section class="section news" id="news">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">Latest News</span>
+
+                <h2>
+                    What's happening at TTC NYAMATA?
+                </h2>
+
+                <p>
+                    Follow school activities, achievements and important
+                    announcements.
+                </p>
+
+            </div>
+
+
+            <div class="news-grid" id="newsGrid">
+
+                <article class="news-card">
+
+                    <div class="news-image">
+
+                        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80"
+                            alt="Students">
+
+                        <div class="news-date">
+                            <strong>12</strong>
+                            <span>SEP</span>
+                        </div>
+
+                    </div>
+
+                    <div class="news-body">
+
+                        <span class="news-category">School News</span>
+
+                        <h3>
+                            New academic year brings new opportunities
+                        </h3>
+
+                        <p>
+                            Discover the latest developments and opportunities
+                            available to students this academic year.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="news-card">
+
+                    <div class="news-image">
+
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80"
+                            alt="Technology">
+
+                        <div class="news-date">
+                            <strong>20</strong>
+                            <span>SEP</span>
+                        </div>
+
+                    </div>
+
+                    <div class="news-body">
+
+                        <span class="news-category">Innovation</span>
+
+                        <h3>
+                            Students explore technology and innovation
+                        </h3>
+
+                        <p>
+                            Students continue developing digital solutions
+                            and innovative approaches to learning.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="news-card">
+
+                    <div class="news-image">
+
+                        <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80"
+                            alt="School event">
+
+                        <div class="news-date">
+                            <strong>28</strong>
+                            <span>SEP</span>
+                        </div>
+
+                    </div>
+
+                    <div class="news-body">
+
+                        <span class="news-category">Community</span>
+
+                        <h3>
+                            TTC community joins educational outreach
+                        </h3>
+
+                        <p>
+                            Students and educators participate in activities
+                            that strengthen relationships with the community.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================================
+     EVENTS
+====================================================== -->
+
+    <section class="section" id="events">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">Events</span>
+
+                <h2>
+                    Upcoming school events
+                </h2>
+
+                <p>
+                    Keep track of important activities and events happening
+                    throughout the school year.
+                </p>
+
+            </div>
+
+
+            <div class="events-grid" id="eventsGrid">
+
+                <div class="event-feature">
+
+                    <div class="event-content">
+
+                        <span class="section-label">
+                            Featured Event
+                        </span>
+
+                        <h3>
+                            Academic & Cultural Celebration
+                        </h3>
+
+                        <p>
+                            A day celebrating student creativity, achievement,
+                            culture and community.
+                        </p>
+
+                        <br>
+
+                        <a href="#contact" class="btn btn-primary">
+                            Event Information →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="event-list">
+
+                    <div class="event-item">
+
+                        <div class="event-calendar">
+                            <div>
+                                <strong>18</strong>
+                                <span>SEP</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4>Students Orientation</h4>
+                            <p>08:00 AM • Main Campus</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="event-item">
+
+                        <div class="event-calendar">
+                            <div>
+                                <strong>25</strong>
+                                <span>SEP</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4>Teachers Development Workshop</h4>
+                            <p>09:00 AM • ICT Hall</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="event-item">
+
+                        <div class="event-calendar">
+                            <div>
+                                <strong>04</strong>
+                                <span>OCT</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4>Sports & Community Day</h4>
+                            <p>08:30 AM • School Grounds</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="event-item">
+
+                        <div class="event-calendar">
+                            <div>
+                                <strong>15</strong>
+                                <span>OCT</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4>Parents & School Meeting</h4>
+                            <p>10:00 AM • Assembly Hall</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================================
+     STATISTICS
+====================================================== -->
+
+    <section class="section statistics">
+
+        <div class="container statistics-grid">
+
+            <div class="stat">
+                <strong>900+</strong>
+                <span>Students</span>
+            </div>
+
+            <div class="stat">
+                <strong>50+</strong>
+                <span>Teaching Staff</span>
+            </div>
+
+            <div class="stat">
+                <strong>11+</strong>
+                <span>Years of Excellence</span>
+            </div>
+
+            <div class="stat">
+                <strong>95%</strong>
+                <span>Community Engagement</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- ======================================================
+     GALLERY
+====================================================== -->
+
+    <section class="section" id="gallery">
+
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">Gallery</span>
+
+                <h2>
+                    Life at TTC NYAMATA
+                </h2>
+
+                <p>
+                    A glimpse into learning, teamwork, creativity and school life.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=85"
+                        alt="Students">
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80"
+                        alt="Students">
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=900&q=80"
+                        alt="Event">
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80"
+                        alt="Technology">
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80"
+                        alt="Students event">
+
+                    <div class="gallery-overlay"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================================
+     CALL TO ACTION
+====================================================== -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <div class="cta-box">
+
+                <div>
+
+                    <h2>
+                        Be part of the TTC NYAMATA community.
+                    </h2>
+
+                    <p>
+                        Explore our programs, connect with the school and
+                        discover opportunities to grow as a future educator.
+                    </p>
+
+                </div>
+
+
+                <div class="cta-buttons">
+
+                    <a href="About.html" class="btn btn-primary">
+                        Contact Us
+                    </a>
+
+                    <a href="courses.html" class="btn btn-outline">
+                        Explore Programs
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================================
+     CONTACT
+====================================================== -->
+
+    <section class="section contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-header">
+
+                <span class="section-label">Contact</span>
+
+                <h2>
+                    Get in touch with TTC NYAMATA
+                </h2>
+
+
+
+            </div>
+
+
+            <div class="contact-grid">
+
+                <div class="contact-info">
+
+                    <div class="contact-card">
+
+                        <div class="contact-card-icon">📍</div>
+
+                        <div>
+                            <h3>Our Location</h3>
+                            <p>Nyamata, Bugesera District, Rwanda</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-card">
+
+                        <div class="contact-card-icon">✉</div>
+
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@ttcnyamata.rw</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-card">
+
+                        <div class="contact-card-icon">☎</div>
+
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+250 788 888 888</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-card">
+
+                        <div class="contact-card-icon">🕐</div>
+
+                        <div>
+                            <h3>Office Hours</h3>
+                            <p>Monday – Friday: 08:00 – 17:00</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <address>
+                    <style>
+                        /* Container holds both the text box and the map */
+                        .contact-container {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 30px;
+                            /* Space between text and map */
+                            align-items: center;
+                            max-width: 1000px;
+                            margin: 20px auto;
+                            padding: 20px;
+                            font-family: sans-serif;
+                        }
+
+                        /* Style the address text block */
+                        .contact-info {
+                            flex: 1;
+                            /* Makes the text column take up equal space */
+                            font-style: normal;
+                            /* Removes the default browser italics */
+                            line-height: 1.6;
+                            color: #333;
+                        }
+
+                        .contact-info strong {
+                            font-size: 1.25rem;
+                            color: #000;
+                            display: inline-block;
+                            margin-bottom: 8px;
+                        }
+
+                        .phone-link {
+                            color: #0066cc;
+                            text-decoration: none;
+                        }
+
+                        .phone-link:hover {
+                            text-decoration: underline;
+                        }
+
+                        /* Style the iframe map container */
+                        .contact-container iframe {
+                            flex: 1.5;
+                            /* Makes the map slightly wider than the text block */
+                            border-radius: 8px;
+                            /* Smooth rounded corners for the map */
+                            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                            /* Subtle shadow drop */
+                        }
+
+                        /* Responsive design for phones and tablets */
+                        @media (max-width: 768px) {
+                            .contact-container {
+                                flex-direction: column;
+                                /* Stacks text on top of the map */
+                                align-items: flex-start;
+                            }
+
+                            .contact-container iframe {
+                                width: 100%;
+                                /* Spans the full width of the mobile screen */
+                            }
+                        }
+                    </style>
+                    <address>
+                        <strong>OUR MAP LOCATION</strong><br>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3085.0206227493973!2d30.10112483763972!3d-2.17854222883824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c355f8bac798f9%3A0x8a3c5889d4a89e96!2sNyamata%20Teachers%20Training%20College!5e0!3m2!1sen!2srw!4v1789643663249!5m2!1sen!2srw"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </address>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ======================================================
+     FOOTER
+====================================================== -->
+
+    <footer>
+
+        <div class="container footer-main">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+
+                    <img src="image.png" alt="TTC NYAMATA">
+
+                    <strong>TTC NYAMATA</strong>
+
+                </div>
+
+                <p>
+                    Developing competent, creative and responsible educators
+                    ready to contribute to the future of Rwanda and beyond.
+                </p>
+
+
+                <div class="socials">
+
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="X">𝕏</a>
+                    <a href="#" aria-label="Instagram">◎</a>
+                    <a href="#" aria-label="YouTube">▶</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <div class="footer-links">
+
+                    <a href="#about">About Us</a>
+                    <a href="#programs">Academics</a>
+                    <a href="#news">News</a>
+                    <a href="#events">Events</a>
+                    <a href="#gallery">Gallery</a>
+
+                </div>
+
+            </div>
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <div class="footer-links">
+
+                    <a href="#">Nyamata, Rwanda</a>
+                    <a href="#">info@ttcnyamata.rw</a>
+                    <a href="#">+250 000 000 000</a>
+                    <a href="#contact">Send us a message</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container footer-bottom-inner">
+
+                <span>
+                    © 2026 TTC NYAMATA. All rights reserved.
+                </span>
+
+                <span>
+                    Designed & developed for TTC NYAMATA
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ======================================================
+     BACK TO TOP
+====================================================== -->
+
+    <button id="backTop" aria-label="Back to top">
+        ↑
+    </button>
+
+
+    <!-- ======================================================
+     SEARCH MODAL
+====================================================== -->
+
+    <div class="search-modal" id="searchModal">
+
+        <div class="search-box">
+
+            <div class="search-top">
+
+                <input id="searchInput" type="search" placeholder="Search TTC NYAMATA...">
+
+                <button class="close-search" onclick="closeSearch()">
+                    ✕
+                </button>
+
+            </div>
+
+
+            <div id="searchResults">
+
+                <div class="search-result">
+                    <strong>Try searching:</strong>
+                    <p>Academics, News, Events, Gallery, Contact...</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* =========================================================
+           MOBILE NAVIGATION
+        ========================================================= */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", () => {
+
+            navLinks.classList.toggle("active");
+
+            menuBtn.textContent =
+                navLinks.classList.contains("active")
+                    ? "✕"
+                    : "☰";
+
+        });
+
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                navLinks.classList.remove("active");
+                menuBtn.textContent = "☰";
+
+            });
+
+        });
+
+
+        /* =========================================================
+           BACK TO TOP
+        ========================================================= */
+
+        const backTop = document.getElementById("backTop");
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 500) {
+                backTop.style.display = "grid";
+            } else {
+                backTop.style.display = "none";
+            }
+
+        });
+
+        backTop.addEventListener("click", () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
+
+
+        /* =========================================================
+           SEARCH
+        ========================================================= */
+
+        const searchModal = document.getElementById("searchModal");
+        const searchInput = document.getElementById("searchInput");
+        const searchResults = document.getElementById("searchResults");
+
+
+        function openSearch() {
+
+            searchModal.classList.add("active");
+
+            setTimeout(() => {
+                searchInput.focus();
+            }, 100);
+
+        }
+
+
+        function closeSearch() {
+
+            searchModal.classList.remove("active");
+
+        }
+
+
+        searchModal.addEventListener("click", e => {
+
+            if (e.target === searchModal) {
+                closeSearch();
+            }
+
+        });
+
+
+        document.addEventListener("keydown", e => {
+
+            if (e.key === "Escape") {
+                closeSearch();
+            }
+
+        });
+
+
+        /*
+           Basic client-side website search.
+           Later this can be connected to the real database.
+        */
+
+        const searchableSections = [
+
+            {
+                title: "About TTC NYAMATA",
+                text: "School history mission vision values education community",
+                link: "#about"
+            },
+
+            {
+                title: "Academic Programs",
+                text: "Teacher education ICT digital learning leadership innovation",
+                link: "#programs"
+            },
+
+            {
+                title: "Latest News",
+                text: "school news announcements activities achievements",
+                link: "#news"
+            },
+
+            {
+                title: "School Events",
+                text: "events orientation workshop sports parents meeting",
+                link: "#events"
+            },
+
+            {
+                title: "Gallery",
+                text: "photos students campus activities school life",
+                link: "#gallery"
+            },
+
+            {
+                title: "Contact TTC NYAMATA",
+                text: "email phone location Nyamata Rwanda contact",
+                link: "#contact"
+            }
+
+        ];
+
+
+        searchInput.addEventListener("input", () => {
+
+            const query =
+                searchInput.value
+                    .trim()
+                    .toLowerCase();
+
+            if (!query) {
+
+                searchResults.innerHTML = `
+            <div class="search-result">
+                <strong>Try searching:</strong>
+                <p>Academics, News, Events, Gallery, Contact...</p>
+            </div>
+        `;
+
+                return;
+
+            }
+
+
+            const matches =
+                searchableSections.filter(item =>
+                    (item.title + " " + item.text)
+                        .toLowerCase()
+                        .includes(query)
+                );
+
+
+            if (!matches.length) {
+
+                searchResults.innerHTML = `
+            <div class="search-result">
+                <strong>No results found.</strong>
+                <p>Try another search term.</p>
+            </div>
+        `;
+
+                return;
+
+            }
+
+
+            searchResults.innerHTML =
+                matches.map(item => `
+
+            <div class="search-result">
+
+                <a href="${item.link}"
+                   onclick="closeSearch()">
+
+                    <strong>${item.title}</strong>
+
+                </a>
+
+                <p>${item.text}</p>
+
+            </div>
+
+        `).join("");
+
+        });
+
+
+        /* =========================================================
+           CONTACT FORM
+        ========================================================= */
+
+        document
+            .getElementById("contactForm")
+            .addEventListener("submit", function (e) {
+
+                e.preventDefault();
+
+                const name =
+                    document.getElementById("name").value;
+
+                alert(
+                    "Thank you, " +
+                    name +
+                    "! Your message has been received."
+                );
+
+                this.reset();
+
+            });
+
+
+        /* =========================================================
+           SIMPLE REVEAL ANIMATION
+        ========================================================= */
+
+        const observer =
+            new IntersectionObserver(
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.style.opacity = "1";
+                            entry.target.style.transform =
+                                "translateY(0)";
+
+                            observer.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: .12
+                }
+            );
+
+
+        document
+            .querySelectorAll(
+                ".program-card, .news-card, .event-item, .leader, .testimonial, .feature"
+            )
+            .forEach(element => {
+
+                element.style.opacity = "0";
+                element.style.transform = "translateY(20px)";
+                element.style.transition =
+                    "opacity .6s ease, transform .6s ease";
+
+                observer.observe(element);
+
+            });
+
+
+    </script>
+
+
+    <script>
+        /* =========================================================
+           TTC NYAMATA - ADMIN CONTENT LOADER
+           Demo storage: browser localStorage.
+           Replace with a real backend/API for production.
+        ========================================================= */
+        (function () {
+            const defaultNews = [
+                {
+                    id: "default-news-1",
+                    title: "New academic year brings new opportunities",
+                    category: "School News",
+                    description: "Discover the latest developments and opportunities available to students this academic year.",
+                    image: "https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80",
+                    date: "2026-09-12"
+                },
+                {
+                    id: "default-news-2",
+                    title: "Students explore technology and innovation",
+                    category: "Innovation",
+                    description: "Students continue developing digital solutions and innovative approaches to learning.",
+                    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&q=80",
+                    date: "2026-09-20"
+                },
+                {
+                    id: "default-news-3",
+                    title: "TTC community joins educational outreach",
+                    category: "Community",
+                    description: "Students and educators participate in activities that strengthen relationships with the community.",
+                    image: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=80",
+                    date: "2026-09-28"
+                }
+            ];
+
+            const defaultEvents = [
+                { id: "default-event-1", title: "Students Orientation", date: "2026-09-18", time: "08:00 AM", location: "Main Campus", description: "New student orientation and welcome activities." },
+                { id: "default-event-2", title: "Teachers Development Workshop", date: "2026-09-25", time: "09:00 AM", location: "ICT Hall", description: "Professional development workshop for teaching staff." },
+                { id: "default-event-3", title: "Sports & Community Day", date: "2026-10-04", time: "08:30 AM", location: "School Grounds", description: "Sports, teamwork and community activities." },
+                { id: "default-event-4", title: "Parents & School Meeting", date: "2026-10-15", time: "10:00 AM", location: "Assembly Hall", description: "School-community meeting with parents and guardians." }
+            ];
+
+            const get = (key, fallback) => {
+                const value = localStorage.getItem(key);
+                if (value === null) {
+                    localStorage.setItem(key, JSON.stringify(fallback));
+                    return fallback;
+                }
+                try { return JSON.parse(value); } catch { return fallback; }
+            };
+
+            const formatDate = date => {
+                const d = new Date(date + "T00:00:00");
+                return {
+                    day: d.toLocaleDateString("en-US", { day: "2-digit" }),
+                    month: d.toLocaleDateString("en-US", { month: "short" }).toUpperCase()
+                };
+            };
+
+            function renderNews() {
+                const grid = document.getElementById("newsGrid");
+                if (!grid) return;
+                const news = get("ttcNews", defaultNews);
+                grid.innerHTML = news.slice(0, 6).map(item => {
+                    const d = formatDate(item.date);
+                    return `
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="${escapeHtml(item.image || "87.png")}" alt="${escapeHtml(item.title)}">
+                        <div class="news-date">
+                            <strong>${d.day}</strong>
+                            <span>${d.month}</span>
+                        </div>
+                    </div>
+                    <div class="news-body">
+                        <span class="news-category">${escapeHtml(item.category || "School News")}</span>
+                        <h3>${escapeHtml(item.title)}</h3>
+                        <p>${escapeHtml(item.description || "")}</p>
+                    </div>
+                </article>`;
+                }).join("");
+            }
+
+            function renderEvents() {
+                const grid = document.getElementById("eventsGrid");
+                if (!grid) return;
+                const events = get("ttcEvents", defaultEvents);
+                const first = events[0];
+                const list = events.slice(1, 6);
+
+                const featured = first ? `
+            <div class="event-feature">
+                <div class="event-content">
+                    <span class="section-label">Featured Event</span>
+                    <h3>${escapeHtml(first.title)}</h3>
+                    <p>${escapeHtml(first.description || "")}</p>
+                    <br>
+                    <a href="#contact" class="btn btn-primary">Event Information →</a>
+                </div>
+            </div>` : "";
+
+                const items = list.map(item => {
+                    const d = formatDate(item.date);
+                    return `
+                <div class="event-item">
+                    <div class="event-calendar">
+                        <div>
+                            <strong>${d.day}</strong>
+                            <span>${d.month}</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4>${escapeHtml(item.title)}</h4>
+                        <p>${escapeHtml(item.time || "")} • ${escapeHtml(item.location || "")}</p>
+                    </div>
+                </div>`;
+                }).join("");
+
+                grid.innerHTML = featured + `<div class="event-list">${items}</div>`;
+            }
+
+            function escapeHtml(value) {
+                return String(value ?? "")
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+            }
+
+            renderNews();
+            renderEvents();
+        })();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TTC NYAMATA | Administrator</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div id="loginScreen" class="login-screen">
+    <div class="login-card">
+        <div class="admin-logo">
+            <img src="image.png" alt="TTC NYAMATA">
+        </div>
+        <span class="eyebrow">TTC NYAMATA</span>
+        <h1>Administrator Login</h1>
+        <p>Manage news, events and messages from the school website.</p>
+
+        <form id="loginForm">
+            <label>Administrator username</label>
+            <input id="adminUser" type="text" autocomplete="username" placeholder="admin" required>
+
+            <label>Password</label>
+            <input id="adminPass" type="password" autocomplete="current-password" placeholder="Enter password" required>
+
+            <button type="submit">Sign in to Dashboard →</button>
+            <div id="loginError" class="error"></div>
+        </form>
+
+        <a class="back-link" href="index.html">← Back to public website</a>
+    
+    </div>
+</div>
+
+<div id="dashboard" class="dashboard hidden">
+    <aside class="sidebar">
+        <div class="side-brand">
+            <img src="image.png" alt="TTC NYAMATA">
+            <div><strong>TTC NYAMATA</strong><small>ADMIN PANEL</small></div>
+        </div>
+
+        <nav>
+            <button class="side-link active" data-section="overview">📊 Dashboard</button>
+            <button class="side-link" data-section="newsManager">📰 News</button>
+            <button class="side-link" data-section="eventsManager">📅 Events</button>
+            <button class="side-link" data-section="messagesManager">💬 Messages <span id="messageBadge">0</span></button>
+        </nav>
+
+        <div class="side-bottom">
+            <a href="index.html">🌐 View Website</a>
+            <button id="logoutBtn">↪ Logout</button>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="admin-header">
+            <div>
+                <span class="eyebrow">ADMINISTRATION</span>
+                <h2 id="pageTitle">Dashboard</h2>
+            </div>
+            <div class="admin-user">
+                <div class="avatar">A</div>
+                <div><strong>Administrator</strong><small id="adminTime"></small></div>
+            </div>
+        </header>
+
+        <section id="overview" class="admin-section active">
+            <div class="welcome">
+                <div>
+                    <span class="eyebrow">CONTROL CENTRE</span>
+                    <h1>Welcome, Administrator.</h1>
+                    <p>Publish school updates, manage upcoming events and respond to visitors who contact TTC NYAMATA.</p>
+                </div>
+                <a href="index.html" target="_blank">Open Website ↗</a>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card"><span>📰</span><strong id="newsCount">0</strong><small>Published News</small></div>
+                <div class="stat-card"><span>📅</span><strong id="eventCount">0</strong><small>Upcoming Events</small></div>
+                <div class="stat-card"><span>💬</span><strong id="messageCount">0</strong><small>Total Messages</small></div>
+                <div class="stat-card"><span>🔔</span><strong id="unreadCount">0</strong><small>Unread Messages</small></div>
+            </div>
+
+            <div class="quick-admin">
+                <button data-go="newsManager">➕ Publish News</button>
+                <button data-go="eventsManager">➕ Create Event</button>
+                <button data-go="messagesManager">💬 Check Messages</button>
+            </div>
+
+            <div class="panel">
+                <div class="panel-head"><div><span class="eyebrow">RECENT ACTIVITY</span><h3>Latest messages</h3></div></div>
+                <div id="recentMessages" class="message-list"></div>
+            </div>
+        </section>
+
+        <section id="newsManager" class="admin-section">
+            <div class="section-title">
+                <div><span class="eyebrow">CONTENT</span><h1>News Management</h1><p>Create, edit or delete news displayed on the public website.</p></div>
+                <button class="primary" id="newNewsBtn">＋ New News</button>
+            </div>
+            <div id="newsList" class="content-list"></div>
+
+            <div id="newsEditor" class="modal hidden">
+                <div class="modal-card">
+                    <button class="modal-close" data-close="newsEditor">×</button>
+                    <span class="eyebrow">PUBLISH</span>
+                    <h2 id="newsEditorTitle">Create News</h2>
+                    <form id="newsForm">
+                        <input type="hidden" id="newsId">
+                        <label>News title<input id="newsTitle" required></label>
+                        <label>Category<input id="newsCategory" placeholder="School News" required></label>
+                        <label>Image URL<input id="newsImage" placeholder="https://..."></label>
+                        <label>Publication date<input id="newsDate" type="date" required></label>
+                        <label>Description<textarea id="newsDescription" rows="5" required></textarea></label>
+                        <button class="primary" type="submit">Publish News</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="eventsManager" class="admin-section">
+            <div class="section-title">
+                <div><span class="eyebrow">SCHEDULE</span><h1>Event Management</h1><p>Create and manage events shown on the public website.</p></div>
+                <button class="primary" id="newEventBtn">＋ New Event</button>
+            </div>
+            <div id="eventList" class="content-list"></div>
+
+            <div id="eventEditor" class="modal hidden">
+                <div class="modal-card">
+                    <button class="modal-close" data-close="eventEditor">×</button>
+                    <span class="eyebrow">SCHEDULE</span>
+                    <h2 id="eventEditorTitle">Create Event</h2>
+                    <form id="eventForm">
+                        <input type="hidden" id="eventId">
+                        <label>Event title<input id="eventTitle" required></label>
+                        <div class="two">
+                            <label>Date<input id="eventDate" type="date" required></label>
+                            <label>Time<input id="eventTime" placeholder="08:00 AM" required></label>
+                        </div>
+                        <label>Location<input id="eventLocation" placeholder="Main Campus" required></label>
+                        <label>Description<textarea id="eventDescription" rows="5"></textarea></label>
+                        <button class="primary" type="submit">Save Event</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="messagesManager" class="admin-section">
+            <div class="section-title">
+                <div><span class="eyebrow">INBOX</span><h1>Contact Messages</h1><p>Read visitor messages and prepare responses.</p></div>
+                <button class="danger" id="clearMessagesBtn">Clear All</button>
+            </div>
+            <div id="messageList" class="message-list full"></div>
+
+            <div id="replyEditor" class="modal hidden">
+                <div class="modal-card">
+                    <button class="modal-close" data-close="replyEditor">×</button>
+                    <span class="eyebrow">REPLY</span>
+                    <h2>Respond to visitor</h2>
+                    <div id="replyTo" class="reply-to"></div>
+                    <textarea id="replyText" rows="7" placeholder="Write your response..."></textarea>
+                    <div class="reply-actions">
+                        <button class="secondary" id="copyReplyBtn">Copy Reply</button>
+                        <button class="primary" id="sendEmailBtn">Open Email App →</button>
+                    </div>
+                    <small>For real server-side email sending, connect this dashboard to a backend/email service.</small>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+
+<script src="admin.js"></script>
+</body>
+</html>
